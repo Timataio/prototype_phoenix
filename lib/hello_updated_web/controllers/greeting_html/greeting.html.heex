@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+	<div>
+	  <h3>Phoenix demo here. I haven't found a way to simulate delay in Phoenix yet.</h3>
+	  <table>
+	    <tr>
+		  <td>Greeting</td>
+		  <td>Inventor</td>
+		</tr>
+		<%=for greeting <- @greetings do %>
+			<tr>
+			  <td><%= greeting.text %> </td>
+			  <td><%= greeting.inventor %> </td>
+			</tr>
+		<% end %>
+	  </table>
+	</div>
+	<div>
+	  <form method="post">
+	    <label>Add a greeting to the list:</label><br>
+	    <input type="text" name="greeting"><br>
+	    <input type="submit" value="Submit">
+	  </form>
+	</div>
+	<script src="/assets/js/bootstrap.bundle.min.js}"></script>
+  </body>
+</html>
